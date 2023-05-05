@@ -2,4 +2,4 @@ Mon Tipe avait pour but de construire une IA de reconnaissance optique pour perm
 des déchets. En effet, il devait donc distinguer les dechets (simplifier avec dechet=bouteille plastique et sac plastique) de ce qui n'en est pas (=poisson).
 
 
-![Cover](https://github.com/HugoKD/Mon_Tipe/img_git/p
+![Cover](https://github.com/HugoKD/Mon_Tipe/img_git/rn schéma.PNG
