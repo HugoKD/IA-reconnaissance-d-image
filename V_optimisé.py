@@ -111,17 +111,17 @@ class descente_de_gradient:  # ajustement des para
 X = []
 Y = []
 
-files = os.listdir('data_set/0')
+files = os.listdir('dataset/0')
 
 for image in files:
-    path = 'data_set/0/{}'.format(image)
+    path = 'dataset/0/{}'.format(image)
     image_tp = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     res = cv2.resize(image_tp, dsize=(64, 64), interpolation=cv2.INTER_CUBIC)
     X.append(res)  # data
     Y.append(0)  # label_entrainement
-files2 = os.listdir('data_set/1')
+files2 = os.listdir('dataset/1')
 for image in files2:
-    path2 = 'data_set/1/{}'.format(image)
+    path2 = 'dataset/1/{}'.format(image)
     image_tp2 = cv2.imread(path2, cv2.IMREAD_GRAYSCALE)
     res = cv2.resize(image_tp2, dsize=(64, 64), interpolation=cv2.INTER_CUBIC)
     X.append(res)
@@ -195,5 +195,11 @@ for i in range(100):
     para_aa.para_aams(dense2)
     para_aa.para_aams(dense3)
 
+np.save('hyper_para/poids1.npy',dense1.poids)
+np.save('hyper_para/poids2.npy',dense2.poids)
+np.save('hyper_para/poids3.npy',dense3.poids)
+np.save('hyper_para/biais1.npy',dense1.biais)
+np.save('hyper_para/biais2.npy',dense2.biais)
+np.save('hyper_para/biais3.npy',dense3.biais)
 plt.plot(EPOCH, PERTE)
 plt.show()
